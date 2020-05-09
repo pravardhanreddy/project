@@ -14,5 +14,6 @@
     <node name="turtle_listener" pkg="learning_tf2" type="turtle_tf2_listener.py" output="screen">
         <param name="turtle" type="string" value="turtle2"/>
     </node>
+    <node pkg="learning_tf2" type="fixed_tf2_broadcaster.py" name="broadcaster_fixed" output="screen"/>
 
 </launch>
