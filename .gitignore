@@ -1,24 +1,5 @@
 # Project exclude paths
 /sim_ws/devel
 /sim_ws/build
-/.gazebo/client-11345
-/.gazebo/server-11345
-/.ignition
-/Desktop
-/.config
-/.cache
-/.gnome
-/.gnupg
-/.java
-/.local
-/.pki
-/.ros
-/.ssh
-/.idea
-/snap
-.bash_history
-.bash_logout
-.ICEauthority
-.profile
-.gitconfig
-/*.log
+/tf2_ws/devel
+/tf2_ws/build
