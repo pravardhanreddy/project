@@ -165,6 +165,8 @@ catkin_install_python(
     PROGRAMS
         nodes/turtle_tf2_broadcaster.py
         nodes/turtle_tf2_listener.py
+        nodes/fixed_tf2_broadcaster.py
+        nodes/dynamic_tf2_broadcaster.py
     DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
@@ -190,11 +192,11 @@ catkin_install_python(
 # )
 
 ## Mark other files for installation (e.g. launch and bag files, etc.)
-# install(FILES
-#   # myfile1
-#   # myfile2
-#   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-# )
+install(FILES
+  launch/start_demo.launch
+  # myfile2
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
 
 #############
 ## Testing ##
