@@ -19,6 +19,15 @@
                     </box>
                 </geometry>
             </visual>
+            <visual name='stand'>
+                <pose>.9 0 .375</pose>
+                <geometry>
+                    <cylinder>
+                        <radius>.05</radius>
+                        <length>.25</length>
+                    </cylinder>
+                </geometry>
+            </visual>
         </link>
 
         <link name="caster">
@@ -98,6 +107,15 @@
             <axis>
                 <xyz>0 1 0</xyz>
             </axis>
+        </joint>
+
+        <include>
+            <uri>model://hokuyo</uri>
+            <pose>0.9 0 1 0 0 0</pose>
+        </include>
+        <joint name="hokuyo_joint" type="fixed">
+            <child>hokuyo::link</child>
+            <parent>chassis</parent>
         </joint>
 
     </model>
