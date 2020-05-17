@@ -20,7 +20,7 @@
                 </geometry>
             </visual>
             <visual name='stand'>
-                <pose>.9 0 .375</pose>
+                <pose>0 0 .375</pose>
                 <geometry>
                     <cylinder>
                         <radius>.05</radius>
@@ -111,7 +111,7 @@
 
         <include>
             <uri>model://hokuyo</uri>
-            <pose>0.9 0 1 0 0 0</pose>
+            <pose>0 0 1 0 0 0</pose>
         </include>
         <joint name="hokuyo_joint" type="fixed">
             <child>hokuyo::link</child>
