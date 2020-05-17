@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.5">
-  <model name="hokuyo">
+  <model name="my_lidar">
     <pose>0 0 0.035 0 0 0</pose>
     <link name="link">
       <inertial>
@@ -9,7 +9,7 @@
       <visual name="visual">
         <geometry>
           <mesh>
-            <uri>model://hokuyo/meshes/hokuyo.dae</uri>
+            <uri>model://my_lidar/meshes/hokuyo.dae</uri>
           </mesh>
         </geometry>
       </visual>
