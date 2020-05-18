@@ -3,5 +3,7 @@
 /sim_ws/build
 /tf2_ws/devel
 /tf2_ws/build
+/turtle_ws/build
+/turtle_ws/devel
 /.idea
 /.vscode
