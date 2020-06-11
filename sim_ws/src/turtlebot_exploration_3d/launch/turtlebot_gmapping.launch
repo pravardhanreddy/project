@@ -1,16 +1,16 @@
 <launch>
 <!--   <node pkg="hokuyo_node" type="hokuyo_node" name="hokuyo" />
  -->
-  <include file="$(find turtlebot_bringup)/launch/3dsensor.launch">
-  <!--  <arg name="rgb_processing" value="true" />
-    <arg name="depth_registration" value="true" />
-    <arg name="depth_processing" value="true" />
-    <arg name="scan_processing" value="true" />           -->
-    
-    <!-- We must specify an absolute topic name because if not it will be prefixed by "$(arg camera)".
-         Probably is a bug in the nodelet manager: https://github.com/ros/nodelet_core/issues/7 --> 
-    <arg name="scan_topic" value="/scan_kinect" />
-  </include>
+<!--  <include file="$(find turtlebot_bringup)/launch/3dsensor.launch">-->
+<!--  &lt;!&ndash;  <arg name="rgb_processing" value="true" />-->
+<!--    <arg name="depth_registration" value="true" />-->
+<!--    <arg name="depth_processing" value="true" />-->
+<!--    <arg name="scan_processing" value="true" />           &ndash;&gt;-->
+<!--    -->
+<!--    &lt;!&ndash; We must specify an absolute topic name because if not it will be prefixed by "$(arg camera)".-->
+<!--         Probably is a bug in the nodelet manager: https://github.com/ros/nodelet_core/issues/7 &ndash;&gt; -->
+<!--    <arg name="scan_topic" value="/scan_kinect" />-->
+<!--  </include>-->
 
   <node pkg="tf" type="static_transform_publisher" name="base_footprint_to_laser" args="0 0 0.35 0 0 0 base_footprint laser 50" />
   
@@ -63,6 +63,6 @@
     <remap from="scan" to="$(arg scan_topic)"/>
   </node>
 
-  <include file="$(find turtlebot_navigation)/launch/includes/move_base.launch.xml"/>
+  <include file="$(find turtlebot3_navigation)/launch/move_base.launch"/>
 
 </launch>
